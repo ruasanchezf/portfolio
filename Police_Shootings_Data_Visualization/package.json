@@ -1,0 +1,14 @@
+{
+  "name": "963c347c4833b443",
+  "main": "963c347c4833b443@2585.js",
+  "version": "2585.0.0",
+  "homepage": "https://observablehq.com/d/963c347c4833b443",
+  "author": {
+    "name": "CS 314: Data Vis",
+    "url": "https://observablehq.com/@cs314w21"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
