@@ -1,0 +1,151 @@
+/*This changes the background color of the navigation bar
+*/
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/*This changes the text color within the different sections
+*/
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+    font size: 19px;
+}
+
+/*This changes the color of the text when hovered over
+*/
+.topnav a:hover {
+    background-color: #ddd;
+}
+
+/*Add a background color to the currently toggled link
+*/
+.topnav a.active {
+    background-color: #4CAF50;
+    color:white;
+}
+/* Search bar graphics
+*/
+.topnav input[type=text] {
+    float:right;
+    padding: 7px;
+    border: black;
+    margin-top: 6px;
+    margin-right: 11px;
+    font-size: 17px;
+}
+
+#logo {
+    position:absolute;
+    float:left;
+    margin-right:0px;
+}
+#highschool{
+    float:right
+    margin-left:0px;
+}
+/*background color
+*/
+body {
+    background-color: #DFCFBE;
+}
+#title{
+    font-size: 24px;
+    font-stretch: ultra-expanded;
+    text-align: center;
+}
+#tagline {
+    font-size:15px;
+    color: white;
+    padding: inherit;
+    margin-left: 20px;
+
+}
+#mainbody{
+  margin: 11px;
+
+}
+.body-text{
+  padding: 20px;
+}
+.body-text h1{
+  font-size: 30px;
+  text-align: center;
+}
+
+#main-content{
+  float: left;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 0px
+}
+
+#side-content{
+  float: right;
+  width: 30%;
+  box-sizing: content-box;
+}
+
+#side-content h1{
+    text-align: center;
+    font-size: 24px;
+}
+
+#side-content h2{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+    font-size: 18px;
+}
+#side-content h3{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+    font-size: 12px;
+    font-style: normal;
+}
+
+#side-content p{
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+}
+
+.feature-info{
+    background-color: rgb(100, 150, 200);
+}
+
+.footer-section {
+    background: #444;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 50px 60px 40px;
+    text-align: left;
+    overflow:hidden;
+    color:white;
+}
+
+.footer-section .left-footer {
+    float: left;
+}
+
+.links a{
+  padding-right: 15px;
+  color: white;
+  font-size: 15px;
+}
+
+.footer-section .left-footer h3 {
+    color:white;
+    font:18px;
+}
+
+.footer-section .links a{
+    color:white;
+    font: 15px;
+}

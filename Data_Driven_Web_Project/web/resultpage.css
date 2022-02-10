@@ -1,0 +1,302 @@
+section {
+  float: left;
+}
+.refineResults {
+  width: 20%;
+  height: 1050px;
+  background-color: #DFCFBE;
+  overflow: auto;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+}
+.refineResults h3 {
+  font-size: 25px;
+  padding-left: 65px;
+}
+
+.instruction {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  box-sizing: border-box;
+  border: solid;
+  border-width: thin;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #DFCFBE;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+/* Button Stuff */
+/* Customize the label (the container) */
+.container {
+display: block;
+position: relative;
+padding-left: 85px;
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 22px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+position: absolute;
+top: 0;
+left: 50px;
+height: 25px;
+width: 25px;
+background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+left: 9px;
+top: 5px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 3px 3px 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
+.data_manipulation {
+  background: green;
+  width: 80%;
+  height: 50px;
+}
+.btn-group button {
+background-color: #4CAF50; /* Green background */
+border: 1px solid black; /* Green border */
+color: black; /* White text */
+width: 50%;
+height: 50px;
+font-size: 22px;
+cursor: pointer; /* Pointer/hand icon */
+float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+content: "";
+clear: both;
+display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+background-color: #3e8e41;
+}
+
+
+.raw_data {
+  background: #DFCFBE;
+  overflow: scroll;
+  width: 80%;
+  height: 1000px;
+}
+.raw_data h2 {
+  color: black;
+  margin-left: 45%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+	text-align: center;
+}
+
+#table_title {
+	text-align: left;
+	padding-left: 100px;
+}
+
+/*This changes the background color of the navigation bar
+*/
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/*This changes the text color within the different sections
+*/
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+    font size: 19px;
+}
+
+/*This changes the color of the text when hovered over
+*/
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*Add a background color to the currently toggled link
+*/
+.topnav a.active {
+    background-color: #4CAF50;
+    color:white;
+}
+/* Search bar graphics
+*/
+.topnav input[type=text] {
+    float:right;
+    padding: 7px;
+    border: black;
+    margin-top: 6px;
+    margin-right: 11px;
+    font-size: 17px;
+}
+
+#logo {
+    position:absolute;
+    float:left;
+    margin-right:0px;
+}
+#highschool{
+    float:right
+    width: 500px;
+    margin-left:0px;
+}
+/*background color
+*/
+body {
+    background-color: #DFCFBE;
+}
+
+#tagline {
+    font-size:15px;
+    margin-left: 20px;
+	padding: inherit;
+    color: white;
+}
+
+.footer-section {
+    background: #444;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 50px 60px 40px;
+    text-align: left;
+    overflow:hidden;
+    color:white;
+}
+
+.footer-section .left-footer {
+    float: left;
+}
+
+.footer-section .left-footer h3 {
+    color:white;
+    font:18px;
+}
+
+.footer-section .links a{
+    color:white;
+    font: 15px;
+}
+
+.footer-section .right-footer {
+    float:right;
+}
+
+.footer-section .right-footer p {
+    display:inline-block;
+    vertical-align:top;
+    margin: 15px 42px 0 0;
+}

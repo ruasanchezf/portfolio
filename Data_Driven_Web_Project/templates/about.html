@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title> About the Data </title>
+        <link rel = "stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="topLOGO">
+                <a href="{{ url_for('home') }}">
+                    <IMG id = "logo" SRC="{{ url_for('static', filename='images/square_logo.jpg') }}" ALT = "Visualizing and Understanding" WIDTH = 100px HEIGHT = 100px>
+                </a>
+                <IMG id="highschool" SRC="{{ url_for('static', filename='images/highschool.png') }}" ALT = "Highschool Background" WIDTH = 100% HEIGHT = 100px>
+            </div>
+            <div class="top">
+            </div>
+            <div class  ="topnav">
+                <input type="text" placeholder = "Search...">
+                <a href = "{{ url_for('contact') }}"> Contact Us</a>
+                <a href = "{{ url_for('home') }}"> About Us</a>
+                <a href = "{{ url_for('about') }}"> About the Data</a>
+                <a href = "{{ url_for('resultpage') }}"> K-12 DataSet</a>
+                <a class ="active" href = "{{ url_for('home') }}"> Home</a>
+                <p id= "tagline"> <em>Visualizing and Understanding</em> </p>
+            </div>
+            <div id = "title">
+                <h1 style ="color: black"><strong>About the Data</strong></h1>
+            </div>
+        </header>
+        <section class="main-content">
+          <div id="data-source">
+              <h1>Data Source</h1>
+              <p>The data is extracted from the Center for Homeland Defense and Security (CDHS). It is part of the Homeland Security Advanced Thinking(HSx) porgram. The research team consisted of two main contributors, David Riedman and Desmond O'Neill. Riedman holds a Masters in Homeland Defense and Security at the Naval Posgraduate School and is a co-founder of the HSx program. O'Neill has a Masters in Forensics Psychology as well as a Masters in Homeland Defense and Security from the Naval Postgraduate School. He is also a co-founder of the HSx program.</p>
+          </div>
+          <div id="data-information">
+            <h1>Data Information</h1>
+            <p> The data is compiled from many different sources such as: "peer-reviewed studies, government reports, mainstream media, non-profits, private websites, blogs, and crowd-sourced lists." All data has been analzed, filtered, deconflicted, and cross-referenced. This dataset is updated as more data becomes available and is then entered into the existing database. </p>
+            <small> *This database and its contents have been updated of January 20th, 2020 </small>
+          </div>
+          <div id="terms-use">
+            <h1>Terms of use</h1>
+            <p> The data is made up of open source information and is avaliable for download to the general public. The Center for Homeland Defense and Security encourages the use of this data stating that it "is only valuable if it can reach law enforcement leaders, school administrators, policy makers, and reasearchers who can use it to make informed decisions about school safety."</p>
+          </div>
+        </section>
+        <footer class = "footer-section">
+            <div class ="left-footer">
+                <h3> CSSS<span>-GroupK</span> &copy2020</h3>
+                <p class="links">
+                    <a href = "#blogs">Blogs</a>
+                    <a href = "#Stories"> Stories</a>
+                    <a href = "#Other Countries"> Other Countries</a>
+                </p>
+        </footer>
+    </body>
+<html>

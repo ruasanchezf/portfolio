@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title> Contact Us </title>
+        <link rel = "stylesheet" href="{{url_for('static', filename='contact.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="topLOGO">
+                <a href="{{ url_for('home') }}">
+                    <IMG id = "logo" SRC="{{ url_for('static', filename='images/square_logo.jpg') }}" ALT = "Visualizing and Understanding" WIDTH = 100px HEIGHT = 100px>
+                </a>
+                <IMG id="highschool" SRC="{{ url_for('static', filename='images/highschool.png') }}" ALT = "Highschool Background" WIDTH = 100% HEIGHT = 100px>
+            </div>
+            <div class="top">
+            </div>
+            <div class  ="topnav">
+                <input type="text" placeholder = "Search...">
+                <a href = "{{ url_for('contact') }}"> Contact Us</a>
+                <a href = "{{ url_for('home') }}"> About Us</a>
+                <a href = "{{ url_for('about') }}"> About the Data</a>
+                <a href = "{{ url_for('resultpage') }}"> K-12 DataSet</a>
+                <a class ="active" href = "{{ url_for('home') }}"> Home</a>
+                <p id= "tagline"> <em>Visualizing and Understanding</em> </p>
+            </div>
+            <div id = "title">
+                <h1 style ="color: black"><strong>Creators and Contact Information</strong></h1>
+            </div>
+        </header>
+        <section class="main-content">
+            <div id="Haruki-Contact">
+                <h2>Haruki Yoshida: Carleton College</h2>
+                <p>+1 651-098-0764</p>
+                <p>yoshidah@carleton.edu</p>
+            </div>
+            <div id="Miguel-Contact">
+                <h2>Miguel Alvarez: Carleton College</h2>
+                <p>+1 651-028-7263</p>
+                <p>alvarezm3@carleton.edu</p>
+            </div>
+            <div id="Fabricio-Contact">
+                <h2>Fabricio Rua-Sanchez: Carleton College</h2>
+                <p>+1 651-826-9463</p>
+                <p>ruasanchezf@carleton.edu</p>
+        </section>
+        <section>
+        <div id="side-submission">
+            <aside class ="form">
+            <h3> Questions, Comments, Concerns?<h3>
+                <form action="mailto:alvarezm3@carleton.edu" method = "post"
+                enctype="text/plain">
+                Name:<br>
+                <input type ="text" name="name"><br>
+                Email:<br>
+                <input type ="text" name="email"><br>
+                Comment/Message:<br>
+                <textarea id="comment-box" rows="4" cols = "50" input type="text" name="message">
+                </textarea><br>
+                <input type ="submit" value="Send">
+                <input type ="reset" value="Reset">
+                </form>
+            </aside>
+        </div>
+        </section>
+        <footer class = "footer-section">
+            <div class ="left-footer">
+                <h3> CSSS<span>-GroupK</span> &copy2020</h3>
+                <p class="links">
+                    <a href = "#blogs">Blogs</a>
+                    <a href = "#Stories"> Stories</a>
+                    <a href = "#Other Countries"> Other Countries</a>
+                </p>
+        </footer>
+    </body>
+</html>

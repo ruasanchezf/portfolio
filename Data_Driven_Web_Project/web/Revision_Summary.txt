@@ -1,0 +1,25 @@
+Revision on UI assignment
+
+NOTE: The code in web folder is designed to work in browser. The code that will work on perlman is different.
+
+We chose this code because it will give us back the most points and this was a part of the web page we were
+not sure of how it would look like at the time we were working on this assignment.
+We wanted to change the layout now that we have a better understanding of the assignment and what we can do
+with the things we learned so far.
+
+Changes
+1. Replaced the image with a sample data table
+	Made it clear how our webpage would present our data. The actual code we will use to create the data table
+	is presented in the comments but for now, we have a java script code that would create the sample data to
+	present.
+
+2. Got rid of the long java script code
+	We changed the layout of the page and in that process we got rid of some of the java script code that was too long.
+	We do have a small portion of java script code but we decided it was not enough to create separate file for it.
+	The java script code we used for our sample table will not be existent in the real code.
+
+3. Made the page understandable in terms of layout and language
+	We changed the layout and language of the page. We created a side bar where users can narrow down their desired data.
+	We worked on making the options clear with easy to understand instructions and also made sure when users put in an invalid
+	input we alert them.
+	We also made the buttons look clickable so that the user knows his/her options.

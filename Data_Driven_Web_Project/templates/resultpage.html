@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Database Results </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='resultpage.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+      <div class="topLOGO">
+          <a href="{{ url_for('home') }}">
+              <IMG id = "logo" SRC="{{ url_for('static', filename='images/square_logo.jpg') }}" ALT = "Visualizing and Understanding" WIDTH = 100px HEIGHT = 100px>
+          </a>
+          <IMG id="highschool" SRC="{{ url_for('static', filename='images/highschool.png') }}" ALT = "Highschool Background" WIDTH = 100% HEIGHT = 100px>
+      </div>
+      <div class  ="topnav">
+          <input type="text" placeholder = "Search...">
+          <a href = "{{ url_for('contact') }}"> Contact Us</a>
+          <a href = "{{ url_for('home') }}"> About Us</a>
+          <a href = "{{ url_for('about') }}"> About the Data</a>
+          <a href = "{{ url_for('resultpage') }}"> K-12 DataSet</a>
+          <a class ="active" href = "{{ url_for('home') }}"> Home</a>
+          <p id= "tagline"> <em>Visualizing and Understanding</em> </p>
+      </div>
+  </header>
+
+  <section class="refineResults">
+	<h3>Refine Data</h3>
+	<p class="instruction">Select the data field you want to sort your data by</p>
+	<div class="sidenav">
+
+		<button class="dropdown-btn">Weapon Type
+    		<i class="fa fa-caret-down"></i>
+  		</button>
+  		<div class="dropdown-container">
+			<form method="POST" action="/resultpage">
+				<br>
+				<label class="container">Handgun
+				  <input type="checkbox" name="weaponType" value="Handgun">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">Rifle
+				  <input type="checkbox" name="weaponType" value="Rifle">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">Shotgun
+				  <input type="checkbox" name="weaponType" value="Shotgun">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">Combination of Different Types of Weapons
+				  <input type="checkbox" name="weaponType" value="Combination of Different Types of Weapons">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">Other
+				  <input type="checkbox" name="weaponType" value="Other">
+				  <span class="checkmark"></span>
+				</label>
+				<input type="submit" value="Submit">
+				<br><br>
+			</form>
+  		</div>
+
+      <button class="dropdown-btn">State
+      		<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-container">
+  			<form method="POST" action="/resultpage">
+  				<br>
+  				<select class="dropdownState" name="stateSelected">
+  					<option value="None">Select State</option>
+  			        <option value="AL">Alabama</option>
+  			        <option value="AK">Alaska</option>
+  			        <option value="AZ">Arizona</option>
+  			        <option value="AR">Arkansas</option>
+  			        <option value="CA">California</option>
+  			        <option value="CO">Colorado</option>
+  			        <option value="CT">Connecticut</option>
+  			        <option value="DE">Delaware</option>
+  			        <option value="FL">Florida</option>
+  					<option value="GA">Georgia</option>
+  			        <option value="HI">Hawaii</option>
+  			        <option value="ID">Idaho</option>
+  			        <option value="IL">Illinois</option>
+  			        <option value="IN">Indiana</option>
+  			        <option value="IA">Iowa</option>
+  			        <option value="KS">Kansas</option>
+  			        <option value="KY">Kentucky</option>
+  			        <option value="LA">Louisiana</option>
+  			        <option value="ME">Maine</option>
+  					<option value="MD">Maryland</option>
+  			        <option value="MA">Massachusetts</option>
+  			        <option value="MI">Michigan</option>
+  			        <option value="MN">Minnesota</option>
+  			        <option value="MS">Mississippi</option>
+  			        <option value="MO">Missouri</option>
+  			        <option value="MT">Montana</option>
+  			        <option value="NE">Nebraska</option>
+  			        <option value="NV">Nevada</option>
+  			        <option value="NH">New Hampshire</option>
+  					<option value="NJ">New Jersey</option>
+  			        <option value="NM">New Mexico</option>
+  			        <option value="NY">New York</option>
+  			        <option value="NC">North Carolina</option>
+  			        <option value="ND">North Dakota</option>
+  			        <option value="OH">Ohio</option>
+  			        <option value="OK">Oklahoma</option>
+  			        <option value="OR">Oregon</option>
+  			        <option value="PA">Pennsylvania</option>
+  			        <option value="RI">Rhode Island</option>
+  					<option value="SC">South Calrolina</option>
+  			        <option value="SD">South Dakota</option>
+  			        <option value="TN">Tennessee</option>
+  			        <option value="TX">Texas</option>
+  			        <option value="UT">Utah</option>
+  			        <option value="VT">Vermont</option>
+  			        <option value="VA">Virginia</option>
+  			        <option value="WA">Washington</option>
+  			        <option value="WV">West Virginia</option>
+  			        <option value="WI">Wisconsin</option>
+  					<option value="WY">Wyoming</option>
+  				</select>
+  				<input type="submit" value="Submit">
+  				<br>
+  			</form>
+    		</div>
+
+  		<button class="dropdown-btn">Year
+      		<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-container">
+  			<form method="POST" action="/resultpage">
+  				<br>
+  				<label class="sidebarLabel">Start Year: </label>
+  				<input type="number" id="startYear" min="1970" max="2020">
+  				<br><br>
+  				<label class="sidebarLabel">End Year: </label>
+  				<input type="number" id="endYear" min="1970" max="2020">
+  				<br><br>
+  				<input type="submit" value="Get Years In Between">
+  				<br><br>
+  			</form>
+    		</div>
+
+  		<button class="dropdown-btn">Number of Victims
+      		<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-container">
+  			<form method="POST" action="/resultpage">
+  				<br>
+  				<label class="sidebarLabel">Min Victims: </label>
+  				<input type="number" id="minVictims" min="0">
+  				<br><br>
+  				<label class="sidebarLabel">Max Victims: </label>
+  				<input type="number" id="maxVictims" min="0">
+  				<br><br>
+  				<input type="submit" value="Get victims with number">
+  				<br><br>
+  			</form>
+    		</div>
+
+    		<button class="dropdown-btn">Affiliation with School
+      		<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-container">
+  			<form method="POST" action="/resultpage">
+  				<br>
+  				<label class="container">Student
+  				  <input type="checkbox" name="affiliation" value="student">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">Teacher
+  				  <input type="checkbox" name="affiliation" value="teacher">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">Staff
+  				  <input type="checkbox" name="affiliation" value="staff">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">Ex-student
+  				  <input type="checkbox" name="affiliation" value="ex-student">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">Other
+  				  <input type="checkbox" name="affiliation" value="other">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<input type="submit" value="Get data by affiliation">
+  				<br><br>
+  			</form>
+    		</div>
+
+  		<button class="dropdown-btn">Hostage Situation
+      		<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-container">
+  			<form method="POST" action="/resultpage">
+  				<br>
+  				<label class="container">Hostages Taken
+  				  <input type="checkbox" name="hostageSituation" value="yes">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">No Hostages Taken
+  				  <input type="checkbox" name="hostageSituation" value="no">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<input type="submit" value="Get data by hostage situation">
+  				<br><br>
+  			</form>
+    		</div>
+
+  		<button class="dropdown-btn">Shooter Experienced Harrasment
+      		<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-container">
+  			<form method="POST" action="/resultpage">
+  				<br>
+  				<label class="container">Experienced Harrasment
+  				  <input type="checkbox" name="shooterExperiencedHarrasment" value="yes">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">No Harrasment
+  				  <input type="checkbox" name="shooterExperiencedHarrasment" value="no">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<input type="submit" value="Get data by harrasment">
+  				<br><br>
+  			</form>
+    		</div>
+
+  		<button class="dropdown-btn">Cause
+      		<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-container">
+  			<form method="POST" action="/resultpage">
+  				<br>
+  				<label class="container">Escalation of Dispute
+  				  <input type="checkbox" name="cause" value="escalationOfDispute">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">Gang Related
+  				  <input type="checkbox" name="cause" value="gangRelated">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">Mental Health
+  				  <input type="checkbox" name="cause" value="mentalHealth">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">Other
+  				  <input type="checkbox" name="cause" value="other">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<input type="submit" value="Get data by cause">
+  				<br><br>
+  			</form>
+    		</div>
+
+  		<button class="dropdown-btn">School Type
+      		<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-container">
+  			<form method="POST" action="/resultpage">
+  				<br>
+  				<label class="container">Elementary School
+  				  <input type="checkbox" name="schoolType" value="elementary">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">Middle School
+  				  <input type="checkbox" name="schoolType" value="juniorHigh">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">High school
+  				  <input type="checkbox" name="schoolType" value="high">
+  				  <span class="checkmark"></span>
+  				</label>
+  				<label class="container">Other
+  				  <input type="checkbox" name="schoolType" value="other">
+  				  <span class="checkmark"></span>
+  			    </label>
+  				<input type="submit" value="Get data by school type">
+  				<br><br>
+  			</form>
+    		</div>
+  	</div>
+    </section>
+
+  <script>
+		/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
+
+		for (i = 0; i < dropdown.length; i++) {
+		  dropdown[i].addEventListener("click", function() {
+		  this.classList.toggle("active");
+		  var dropdownContent = this.nextElementSibling;
+		  if (dropdownContent.style.display === "block") {
+		  dropdownContent.style.display = "none";
+		  } else {
+		  dropdownContent.style.display = "block";
+		  }
+		  });
+		}
+    /* Java Script to check only one of the checkboxes*/
+  	$(document).ready(function(){
+      	$('input:checkbox').click(function() {
+          	$('input:checkbox').not(this).prop('checked', false);
+      	});
+  	});
+  </script>
+
+  <section class="data_manipulation">
+    <div class="btn-group">
+      <button>Create Graph</button>
+      <button>Download Data</button>
+    </div>
+  </section>
+
+  <section class="raw_data">
+    <h2>Data Table</h2>
+	<table>
+	  <thead>
+	  <tr>
+		  <th colspan="33">
+         	<h3 id="table_title">{{ title }}</h3>
+		  </th>
+	  </tr>
+	  <tr>
+		  <th>Date</th>
+		  <th>School</th>
+		  <th>City</th>
+		  <th>State</th>
+		  <th>Reliability Score</th>
+		  <th>Killed(Including Shooter)</th>
+		  <th>Wounded</th>
+		  <th>Total Injured or Killed</th>
+		  <th>Victim(s) Gender(s)</th>
+		  <th>Victim(s) Race</th>
+		  <th>Victim(s) Ethnicity</th>
+		  <th>Targeted Specific Victim?</th>
+		  <th>Bullied?</th>
+		  <th>Domestic Violence?</th>
+		  <th>Preplanned Attack?</th>
+		  <th>Summary</th>
+		  <th>Category</th>
+		  <th>School Type</th>
+		  <th>Narrative</th>
+		  <th>Time of Incident</th>
+		  <th>During School Day?</th>
+		  <th>During Sport Event?</th>
+		  <th>During School Event?</th>
+		  <th>Location</th>
+		  <th>Number of Shots Fired</th>
+		  <th>Weapon Type</th>
+		  <th>Shooter Name</th>
+		  <th>Shooter Age</th>
+		  <th>Shooter Gender</th>
+		  <th>Shooter Affiliation to School</th>
+		  <th>Hostage Situation</th>
+	  </tr>
+	  </thead>
+	  <tbody>
+	  	{% for incident in table %}
+	  		<tr>
+				{% for data in incident %}
+					<td>{{ data }}</td>
+				{% endfor %}
+			</tr>
+	  	{% endfor %}
+	  </tbody>
+	</table>
+</section>
+
+  <footer class = "footer-section">
+      <div class ="left-footer">
+          <h3> CSSS<span>-GroupK</span> &copy2020</h3>
+          <p class="links">
+              <a href = "#blogs">Blogs</a>
+              <a href = "#Stories"> Stories</a>
+              <a href = "#Other Countries"> Other Countries</a>
+          </p>
+  </footer>
+
+
+</body>
+</html>
