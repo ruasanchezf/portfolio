@@ -5,3 +5,10 @@ All of them required substantial amount of time and so I decided to display that
 
 The three projects include:
 
+A data driven website.
+
+A data visualisation.
+
+An interpreter for the programming language of scheme.
+
+More information is provided in the README file for each project.
