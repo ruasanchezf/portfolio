@@ -6,4 +6,7 @@ the object oriented C language. We did not attempt to create a complete interpre
 basic edge cases in Scheme. 
 
 This was a partner assignment with James Craig that was completed during my junior year. It took approximately 4-5 weeks to complete.
+The interpreter was turned in with sections at a time, each submisison having required tests. The test files present were the ones for 
+the final submission and thus are the most complex tests. These test were a benchmark for our interpreter and were provided by the 
+class instructor.
 
