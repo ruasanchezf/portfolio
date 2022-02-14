@@ -1,4 +1,8 @@
-# Final Project
+# Final Project for Data Visualization
+
+This was a partner assignment for the final project in my Data Visualization class during my junior year at Carleton.
+My partner for this project was Martin Bernard. We chose a heavy topic in response to the death of George Floyd and the 
+BLM movement at the time. The data visualization takes data of police shootings since
 
 https://observablehq.com/d/963c347c4833b443@2585
 
