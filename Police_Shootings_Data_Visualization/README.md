@@ -2,7 +2,11 @@
 
 This was a partner assignment for the final project in my Data Visualization class during my junior year at Carleton.
 My partner for this project was Martin Bernard. We chose a heavy topic in response to the death of George Floyd and the 
-BLM movement at the time. The data visualization takes data of police shootings since
+BLM movement at the time. The data visualization takes data of police shootings since 2015. The main goal of our project was 
+to showcase the inequality present within the victim rates of police shootings. We focuse mianly on the aspect of race, allowing the
+user to see both the raw values and the proportional values for each race. These were both displayed on a line graph as well as a
+map. We inteded to continue adding proprotional values for each categoiry but did not have enough time. More infomration on the 
+project is provided in the observable notebook:
 
 https://observablehq.com/d/963c347c4833b443@2585
 
